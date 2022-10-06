@@ -36,7 +36,7 @@ const actionReducer = (state: StateType, action: Action): StateType => {
         }
         case "DELETE_ALL_TASK": {
             localStorage.removeItem("userTask");
-
+            localStorage.removeItem("userTag");
             return {
                 task: [],
                 msg: {
@@ -65,11 +65,21 @@ const actionReducer = (state: StateType, action: Action): StateType => {
         }
         case "EDIT_TASK": {
             const givenId = action.payload.id;
-            const newData = state.task.filter(i => i.id === givenId ? action.payload : i);
+            let newArr:SingleTaskType[]=[];
+            state.task.forEach(i => {
+                if (i.id===action.payload.id) {
+                   newArr=[...newArr,action.payload] 
+                }else{
+                    newArr=[...newArr,i]
+                }
+            });
+            console.log(action.payload);
+            
+            console.log(newArr);
             
             
             return {
-                task: newData,
+                task: newArr,
                 msg: {
                     content: "edited the task",
                     type: "scucess"

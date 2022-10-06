@@ -1,13 +1,16 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import { TaskCardList, TaskInput } from '../../component';
 import { useActuon } from '../../context/action-context'
 import "./home.css"
 
 const HomePg = () => {
   const {actionState}=useActuon();
+  const [data,setData]=useState(actionState.task)
+  useEffect(()=>{
+    setData(prev=>prev=actionState.task)
+  },[actionState.task])
   
   // console.log(actionState);
-  const data=actionState.task.filter(i=>!i.isDeleted&&i)
   return (
     <>
       <div className="home-pg">

@@ -20,7 +20,7 @@ const TaskCard = ({ data }: Prop) => {
   },[data.title,data.desc])
   const [edit, setEdit] = useState(false);
   const [title, setTitle] = useState(data.title);
-  const [tag, setTag] = useState("default");
+  const [tag, setTag] = useState(data.tag);
   const [desc, setDesc] = useState(data.desc);
   const { actionState, actionDispatch } = useActuon();
   // console.log(data.tag === "default");
@@ -29,44 +29,51 @@ const TaskCard = ({ data }: Prop) => {
   return (
     <div className="task-card-container" style={data.isCompleted?{backgroundColor:"lightgreen"}:edit?{backgroundColor:"lightblue"}:{}} >
       
-      {
-        !edit?
-        data.tag !== "default"&&<div className="task-card-tag">{data.tag}</div>
-        :""
-      }
+      {/* {
+          <div className="task-promodoro-detaile-tag">{data.tag}</div>
+      } */}
       
       {!edit ? (<><div className="task-card-head">
         {data.title}
       </div>
+      {
+        data.tag==="default"?"":<div className="task-card-tag">{data.tag}</div>
+      }
+        
         <div className="task-card-desc">
           {data.desc}
         </div>
-        {/* <div className="task-card-tag">{data.tag}</div> */}
         </>) : (<>
         <div className="task-card-edit-container">
             <input className="task-card-head-edit" value={title} onChange={(e)=>setTitle(pre=>pre=e.target.value)} placeholder="ente the task title"/>
-            <select name="tag" id="" className="task-card-select-tag" onChange={(e)=>setTag(prev=>prev=e.target.value)}>
-              <option value="default" className="task-card-option-tag">select the tag</option>
+            <select name="tag" id="" className="task-card-select-tag" onChange={(e)=>{
+              setTag(prev=>prev= e.target.value)
+              
+            }}>
+              <option value="default">select the tag</option>
               {
-                actionState.totalTags.map(i=>{
-                  return <option value={i} className="task-card-option-tag">{i}</option>
+                actionState.totalTags.map((i,index)=>{
+                  return<option value={i} key={index}>{i}</option>
                 })
               }
             </select>
             <textarea className="task-card-desc-edit" value={desc} onChange={(e)=>setDesc(pre=>pre=e.target.value)} placeholder="enter the description of the task "></textarea>
             <div className="task-card-edit-btn-container">
             <button className="task-card-edit-btn" onClick={()=>{
-               actionDispatch({
-                type:"EDIT_TASK",
-                payload:{
-                  id:data.id,
-                  isCompleted:data.isCompleted,
-                  title:title,
-                  desc:desc,
-                  isDeleted:data.isDeleted,
-                  tag:tag
-                }
-               })
+              if (tag&&title) {
+                
+                actionDispatch({
+                  type:"EDIT_TASK",
+                  payload:{
+                   tag:tag,
+                   title:title,
+                   desc:desc,
+                   id:data.id,
+                   isCompleted:data.isCompleted,
+                   isDeleted:data.isDeleted,
+                 }
+                })
+              }
                setEdit(prev=>prev=false)
             }}>done</button>
             </div>
