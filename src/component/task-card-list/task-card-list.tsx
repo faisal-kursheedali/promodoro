@@ -16,7 +16,7 @@ const TaskCardList = ({data,listHead}:Props) => {
       {listHead}
     </div>
     {
-      data.length>0?<>
+      listArr.length>0?<>
     <ul className="task-card-list">
       {
         listArr.map(i=>{
