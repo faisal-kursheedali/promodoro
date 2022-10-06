@@ -7,7 +7,7 @@ import { useApp } from '../../context/app-context';
 
 const Promodoro = () => {
     const {appState,appDispatch}=useApp();
-    let time=appState.selectedTime;
+    let [time,setTime]=useState(appState.selectedTime);
     let totalSec = time * 60
     const [timer, setTimer] = useState(0);
     const [stop, setStop] = useState(false);
@@ -17,7 +17,7 @@ const Promodoro = () => {
     useEffect(()=>{
         setStop(true)
         setTimeout(()=>{
-            time=appState.selectedTime;
+            setTime(appState.selectedTime);
             setSec(0);
             setMin(0);
             setTimer(0);

@@ -16,7 +16,7 @@ const App:React.FC=()=> {
     // actionDispatch({
     //   type:"GET_ALL_TAG"
     // })
-  },[])
+  },[actionDispatch])
   useEffect(()=>{
     if (actionState.task.length>0) {
       localStorage.setItem("userTask",JSON.stringify(actionState.task))
