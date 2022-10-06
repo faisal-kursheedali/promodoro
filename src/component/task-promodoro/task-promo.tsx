@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 // import { SingleTaskType } from '../../context/action-type'
 import { useApp } from '../../context/app-context'
-import { BsTrash } from "react-icons/bs"
 import { AiOutlineCloseCircle,AiOutlineEdit } from "react-icons/ai"
+import { BsTrash } from "react-icons/bs"
 import { IoReloadCircleOutline } from "react-icons/io5"
 import { MdDoneOutline } from "react-icons/md"
 import "./task-promo.css"
