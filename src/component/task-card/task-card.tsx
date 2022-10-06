@@ -23,7 +23,7 @@ const TaskCard = ({ data }: Prop) => {
   const [tag, setTag] = useState("default");
   const [desc, setDesc] = useState(data.desc);
   const { actionState, actionDispatch } = useActuon();
-  console.log(data.tag === "default");
+  // console.log(data.tag === "default");
   const {appDispatch}=useApp();
   
   return (

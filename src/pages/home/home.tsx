@@ -6,7 +6,7 @@ import "./home.css"
 const HomePg = () => {
   const {actionState}=useActuon();
   
-  console.log(actionState);
+  // console.log(actionState);
   const data=actionState.task.filter(i=>!i.isDeleted&&i)
   return (
     <>

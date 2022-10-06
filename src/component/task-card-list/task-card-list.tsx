@@ -20,7 +20,7 @@ const TaskCardList = ({data,listHead}:Props) => {
     <ul className="task-card-list">
       {
         listArr.map(i=>{
-          console.log(i)
+          // console.log(i)
           
           return(
             <>
