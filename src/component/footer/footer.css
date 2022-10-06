@@ -50,6 +50,7 @@
 .footer-list-item-link{
     text-decoration: none;
     color:inherit;
+    cursor: pointer;
 }
 .footer-end{
     margin-bottom:  1.5rem;

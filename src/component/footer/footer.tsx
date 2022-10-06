@@ -1,6 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useApp } from '../../context/app-context';
 import "./footer.css"
 const Footer = () => {
+    
+    const {appDispatch}=useApp();
+    const navigate=useNavigate();
     return (
         <>
             <div className="footer-container">
@@ -17,13 +22,28 @@ const Footer = () => {
                         <div className="footer-list-head">Link</div>
                         <ul className="footer-list">
                             <li className="footer-list-item">
-                                <a href="/" className="footer-list-item-link">promodoro</a>
+                                <div  className="footer-list-item-link" onClick={()=>{
+                                    appDispatch({
+                                        type:"SELECT_TIME",
+                                        payload:0
+                                    })
+                                    navigate("/")}}>promodoro</div>
                             </li>
                             <li className="footer-list-item">
-                                <a href="/completed" className="footer-list-item-link">completed</a>
+                                <div  className="footer-list-item-link" onClick={()=>{
+                                    appDispatch({
+                                        type:"SELECT_TIME",
+                                        payload:0
+                                    })
+                                    navigate("/completed")}}>completed</div>
                             </li>
                             <li className="footer-list-item">
-                                <a href="/timer" className="footer-list-item-link">timer</a>
+                                <div  className="footer-list-item-link"onClick={()=>{
+                                    appDispatch({
+                                        type:"SELECT_TIME",
+                                        payload:0
+                                    })
+                                    navigate("/timer")}} >timer</div>
                             </li>
                             {/* <li className="footer-list-item">
                                 <a href="/wishlist" className="footer-list-item-link">Wishlist</a>
@@ -40,10 +60,10 @@ const Footer = () => {
                         <div className="footer-list-head">Social Media</div>
                         <ul className="footer-list">
                             <li className="footer-list-item">
-                                <a href="/https://twitter.com/faisal_devop" className="footer-list-item-link">Twitter</a>
+                                <a href="https://twitter.com/faisal_devop" className="footer-list-item-link">Twitter</a>
                             </li>
                             <li className="footer-list-item">
-                                <a href="/https://github.com/faisal-kursheedali" className="footer-list-item-link">Github</a>
+                                <a href="https://github.com/faisal-kursheedali" className="footer-list-item-link">Github</a>
                             </li>
                             <li className="footer-list-item">
                                 <a href="https://www.linkedin.com/in/faisal-k-4a02801b2/" className='footer-list-item-link'>Linkedin</a>
@@ -55,7 +75,7 @@ const Footer = () => {
                                 <a href="https://discordapp.com/users/#1279" className='footer-list-item-link'>Discord</a>
                             </li>
                             <li className="footer-list-item">
-                                <a href="/https://www.instagram.com/demented_devops/" className="footer-list-item-link">Instagram</a>
+                                <a href="https://www.instagram.com/demented_devops/" className="footer-list-item-link">Instagram</a>
                             </li>
 
                         </ul>

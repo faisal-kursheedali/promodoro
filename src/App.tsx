@@ -9,6 +9,9 @@ import Main from './main';
 const App:React.FC=()=> {
   const {actionState,actionDispatch}=useActuon();
   const {appState}=useApp();
+  if (!appState.isTimeSelected) {
+    document.title="Pradoro"
+  }
   useEffect(()=>{
     actionDispatch({
       type:"GET_ALL_TASK"
@@ -29,11 +32,6 @@ const App:React.FC=()=> {
       
     }
   },[actionState.totalTags])
-  useEffect(()=>{
-    if (!appState.isTimeSelected) {
-      document.title="Pradoro"
-    }
-  },[appState.isTimeSelected])
   return (
     <div className="app-container">
       <div className="app">
