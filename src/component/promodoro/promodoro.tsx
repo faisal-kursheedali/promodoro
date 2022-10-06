@@ -21,7 +21,7 @@ const Promodoro = () => {
             setSec(0);
             setMin(0);
             setTimer(0);
-            totalSec=time*60;
+            // totalSec=time*60;
             setStop(false)
         },1000)
     },[appState.selectedTime])

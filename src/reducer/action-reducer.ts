@@ -140,14 +140,14 @@ const actionReducer = (state: StateType, action: Action): StateType => {
                } 
         }
         case"GET_ALL_TAG":{
-            const data=localStorage.getItem("userTag");
-            let tags; 
-            if(data){
-                tags=JSON.parse(data);
-            }
-            else{
-                tags=[];
-            }
+            // const data=localStorage.getItem("userTag");
+            // let tags; 
+            // if(data){
+            //     tags=JSON.parse(data);
+            // }
+            // else{
+            //     tags=[];
+            // }
             return {
                 task:state.task,
                 msg:{
