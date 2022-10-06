@@ -8,7 +8,7 @@ import "./nav.css"
 const Nav = () => {
   const navigate=useNavigate();
   const {appState,appDispatch}=useApp();
-  const {actionState,actionDispatch}=useActuon();
+  const {actionDispatch}=useActuon();
   return (
     <div className="nav-container">
       <div className="nav-box">

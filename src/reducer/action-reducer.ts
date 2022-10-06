@@ -1,4 +1,3 @@
-import { stat } from "fs"
 import { SingleTaskType, StateType } from "../context/action-type"
 
 type HandleAllTask = {
@@ -141,14 +140,21 @@ const actionReducer = (state: StateType, action: Action): StateType => {
                } 
         }
         case"GET_ALL_TAG":{
-            const tags=localStorage.getItem("tags");
+            const data=localStorage.getItem("userTag");
+            let tags; 
+            if(data){
+                tags=JSON.parse(data);
+            }
+            else{
+                tags=[];
+            }
             return {
                 task:state.task,
                 msg:{
                     content:"fetched all tags",
                     type:"scucess"
                 },
-                // totalTags:[...state.totalTags,tags]
+                // totalTags:tags
                 totalTags:[]
             }
     }

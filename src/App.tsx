@@ -13,6 +13,9 @@ const App:React.FC=()=> {
     actionDispatch({
       type:"GET_ALL_TASK"
     })
+    // actionDispatch({
+    //   type:"GET_ALL_TAG"
+    // })
   },[])
   useEffect(()=>{
     if (actionState.task.length>0) {
@@ -20,6 +23,12 @@ const App:React.FC=()=> {
       
     }
   },[actionState.task])
+  // useEffect(()=>{
+  //   if (actionState.totalTags.length>0) {
+  //     localStorage.setItem("userTag",JSON.stringify(actionState.totalTags))
+      
+  //   }
+  // },[actionState.totalTags])
   useEffect(()=>{
     if (!appState.isTimeSelected) {
       document.title="Pradoro"

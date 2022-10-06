@@ -6,7 +6,7 @@ import "./sidenav.css"
 
 const Sidenav = () => {
   const { actionState } = useActuon();
-  const {appState,appDispatch}=useApp();
+  const {appDispatch}=useApp();
   const navigate=useNavigate();
   return (
     <div className="sidenav-container">
