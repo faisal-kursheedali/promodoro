@@ -1,0 +1,93 @@
+.input-container{
+    padding: 1.5rem;
+    min-width: 200px;
+    max-width: max-content;
+    border-radius: .5rem;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+}
+.input-task-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid ;
+    width: 100%;
+}
+.desc-box{
+    margin-top: 1rem;
+}
+.desc-ctrl{
+   font-size: .9rem;
+   font-weight: 500;
+   font-family: Arial, Helvetica, sans-serif;
+   cursor: pointer;
+   max-width: max-content;
+}
+.hide-desc{
+    color: red;
+    padding: 6px;
+}
+.show-desc{
+    padding: 6px;
+    color: green;
+}
+.input-task-desc{
+    margin-top: .5rem;
+    width: 100%;
+    font-size: 1rem;
+    resize: none;
+}
+.input-btn{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    outline: none;
+    border: 0px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: navy;
+    color: white;
+}
+/* .input-btn:focus{
+    scale: 0.9;
+} */
+.input-btn-box{
+    margin-top: .5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.input-task-select-tag{
+    padding: 4px;
+   margin-top: 1rem;
+   cursor: pointer;
+   font-weight: 500;
+}
+.input-task-add-tag{
+    padding: 6px;
+    margin: .5rem;
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.input-task-add-tag-container{
+    margin-top: 1rem;
+}
+.input-task-add-tag-btn{
+    cursor: pointer;
+    border: 0px;
+    outline: none;
+    background-color: white;
+    border: 1px solid;
+    color: navy;
+    margin: 4px;
+    font-size: 1rem;
+    border-radius: .3rem;
+    
+}
+.input-task-select-tag{
+    cursor: pointer;
+}

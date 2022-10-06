@@ -1,0 +1,78 @@
+.task-card-container{
+    width: 200px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.task-card-head{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: .5rem auto;
+}
+.task-card-desc{
+    font-size: 1.05rem;
+}
+.task-card-btn-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: .25rem;
+}
+.task-card-edit-container{
+    padding: .5rem;
+}
+.task-card-head-edit{
+    padding: 6px;
+    font-weight: 600;
+    width: 100%;
+}
+.task-card-select-tag{
+    margin-top: .5rem;
+    cursor: pointer;
+}
+.task-card-desc-edit{
+    margin-top: .5rem;
+    width: 100%;
+    resize: none;
+    height: 100px;
+}
+.task-card-edit-btn-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.task-card-edit-btn{
+    border: 0px;
+    outline: none;
+    background-color: navy;
+    color: white;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.task-card-btn{
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .5rem;
+    
+}
+.task-card-tag{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 2px 6px;
+    background-color:navy;
+    color: white;
+    border-radius: .3rem;
+}
+.task-card-delete{
+    color: red;
+}
+.task-card-done{
+    color: green;
+}
+.task-card-not-done{
+    color:brown;
+}
+.task-card-edit{
+    color: blue;
+}

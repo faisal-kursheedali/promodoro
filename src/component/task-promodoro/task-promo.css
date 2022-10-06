@@ -1,0 +1,174 @@
+.task-promodoro-container{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    padding: 1rem;
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.742);
+}
+.task-promodoro-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 50%;
+
+}
+.promodoro-time-selector{
+    /* align-self: flex-end; */
+    margin-top: auto;
+    align-self: center;
+}
+.task-promodoro-detaile-container{
+    padding: 1rem;
+}
+.task-promodoro-detaile{
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    position: relative;
+    width: 50%;
+}
+.task-promodoro-detaile-title{
+    margin: .5rem .1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.task-promodoro-detaile-desc{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.task-promodoro-detaile-tag{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: navy;
+    color: white;
+    padding: 2px 6px;
+    border-radius: .3rem;
+}
+.task-promodoro-detaile-btn-container{
+    margin-top: auto;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    right: 1rem;
+    
+}
+.task-promodoro-detaile-btn{
+    margin:  1rem auto;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.task-promodoro-detaile-edit{
+    color: blue;
+}
+.task-promodoro-detaile-delete{
+    color: red;
+}
+.task-promodoro-detaile-done{
+    color: green;
+}
+.task-promodoro-detaile-retry{
+    color: brown;
+}
+.task-promodoro-detaile-edit-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.task-promodoro-detaile-edit-btn{
+    max-width: max-content;
+    margin-left: auto;
+    color: white;
+    background-color: navy;
+    outline: none;
+    border: 0px;
+    padding: 2px 6px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.task-promodoro-detaile-title-edit{
+    width: 100%;
+    margin: 8px auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+.task-promodoro-detaile-desc-edit{
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin: 8px auto;
+    font-size: 1.1rem;
+    
+}
+.task-promodoro-detaile-tag-edit-select{
+    max-width: max-content;
+    margin: 8px initial;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.task-promodoro-close{
+    color: red;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@media (max-width:550px) {
+    .task-promodoro-container{
+     flex-direction: column;
+     /* align-items: center; */
+     /* width: 100%; */
+     padding: 4px;
+    }
+    .task-promodoro-box{
+       width: 100%;
+       box-sizing: border-box;
+       padding: 1rem;
+    }
+    .task-promodoro-detaile-container{
+        padding: 0px;
+    }
+    .task-promodoro-detaile{
+        border: 0px;
+        padding: 0px;
+        border-top: 1px solid gray;
+        width: 100%;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    .task-promodoro-detaile-tag{
+        left: initial;
+        right: 6px;
+    }
+    .task-promodoro-detaile-btn-container{
+        flex-direction: row;
+        position: relative;
+        top: initial;
+        right: initial;
+        padding: 1rem;
+    }
+    .task-promodoro-detaile-btn{
+        margin: auto 1rem;
+    }
+    .task-promodoro-detaile-tag{
+        position: relative;
+        top: initial;
+        left: initial;
+        bottom: initial;
+        right: inherit;
+        width: max-content;
+        margin-bottom: .5rem;
+    }
+}

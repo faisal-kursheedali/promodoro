@@ -1,0 +1,60 @@
+.main-container{
+    position: relative;
+}
+.main-content{
+    position: relative;
+    min-height: 100vh;
+    padding-top: 1rem;
+}
+.main-promodoro-cmp{
+    position: absolute;
+    top: 0px;
+    /* display: flex;
+    justify-content: center; */
+    /* left: 50%; */
+    z-index: 5;
+    width: 100%;
+    min-width: 250px;
+    /* min-height: 50vh; */
+}
+/* .main-delete-all-task{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    outline: none;
+    border: 0px;
+    background-color: navy;
+    color: white;
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+} */
+.main-sidenav-container{
+    position: absolute;
+    height: 100%;
+    margin: 0px;
+    top: 0px;
+    z-index: 5;
+    top:0px;
+    max-height: 50vh;
+    overflow-y: scroll;
+    height: max-content;
+}
+.main-sidenav-container::-webkit-scrollbar{
+    width: 10px;
+    background-color:white;
+}
+.main-sidenav-container::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color:lightblue;
+}
+@media (max-width:710px) {
+    .main-delete-all-task{
+        display: none;
+    }
+}
+@media (min-width:750px) {
+    .main-sidenav-container{
+        left: 20%;
+    }
+}

@@ -1,0 +1,14 @@
+.empty-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.empty-list{
+    width: 40%;
+    min-width: 250px;
+}
+.empty-msg{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}

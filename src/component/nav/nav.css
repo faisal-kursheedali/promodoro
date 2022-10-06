@@ -1,0 +1,48 @@
+.nav-box{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    
+}
+
+.nav-container{
+    color: white;
+    /* background-color: black; */
+    background-color: navy;
+}
+.nav-menu{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.nav-logo{
+    z-index: 10;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto auto;
+    cursor: pointer;
+}
+.nav-delete-all{
+    outline: none;
+    border: 0px;
+    background-color:white;
+    color: navy;
+    padding: 1px 4px;
+    font-size: .9rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: .3rem;
+}
+@media (min-width:750px) {
+    .nav-box{
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        max-width: 50%;
+        margin: auto;
+    } 
+}

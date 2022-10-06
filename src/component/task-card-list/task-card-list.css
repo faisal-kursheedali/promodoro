@@ -1,0 +1,30 @@
+.task-card-list-container{
+    padding-left: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.task-card-list-head{
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.task-card-list{
+    padding: 0px;
+    list-style: none;
+    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.task-card-list-item{
+    margin: 1rem;
+}
+.task-empty-box{
+    padding: .5rem;
+}
+@media (min-width:550px) {
+    .task-card-list-head{
+        display: flex;
+        margin-left: 10rem;
+    }
+}

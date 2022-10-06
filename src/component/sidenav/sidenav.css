@@ -1,0 +1,25 @@
+.sidenav-container{
+    background-color:navy;
+    color: white;
+    width: max-content;
+
+}
+.sidenav-list-logo{
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sidenav-list{
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.sidenav-list-item{
+    padding: 1rem 2rem ;
+    cursor: pointer;
+}
+.sidenav-list-item:hover{
+    background-color: rgb(71, 71, 182);
+}
