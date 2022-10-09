@@ -3,7 +3,7 @@ import React,{useContext,createContext,useReducer} from 'react'
 import actionReducer, { Action } from '../reducer/action-reducer'
 import {   StateType } from './action-type'
 
-const initialState:StateType={
+export const initialState:StateType={
   task:[],
   msg:{
     content:"",
