@@ -8,7 +8,10 @@
 
 
 <h3>Promodoro</h3> 
-<div>Promodoro is a fully functioning dynamic web application. It is a Promodoro web application that is built using HTML, CSS, TypeScript and React-router. It has all the basic features of a Promodoro application.</div>
+<div>Promodoro is a fully functioning dynamic web application. It is a Promodoro web application that is built using HTML, CSS, TypeScript and React-router. It has all the basic features of a Promodoro application. <strong>In this app all the basic features of the application is tested using JEST</strong>.</div>
+
+
+
 
 <h4>Pages</h4>
 <ul>
@@ -27,6 +30,7 @@
 <li>Data Persistence</li>
 <li>Tags for task</li>
 <li>Page title in sync with Pomodoro time</li>
+<li>Testing is done using <b>JEST</b></li>
 </ul>
   
   
@@ -38,6 +42,11 @@
 
 https://user-images.githubusercontent.com/85350108/201942596-b7deb4f3-dd37-4096-9137-3fc19599a331.mp4
 
+<br/>
+<h1>TEST</h1>
+<br/>
+
+![Promodoro-test](https://user-images.githubusercontent.com/85350108/201946384-c190a1e4-6fbb-4ec2-b659-7dfa9e28b987.png)
 
 
 
