@@ -73,9 +73,9 @@ const actionReducer = (state: StateType, action: Action): StateType => {
                     newArr=[...newArr,i]
                 }
             });
-            console.log(action.payload);
+            // console.log(action.payload);
             
-            console.log(newArr);
+            // console.log(newArr);
             
             
             return {
@@ -104,7 +104,7 @@ const actionReducer = (state: StateType, action: Action): StateType => {
             
             const completedTask=action.payload;
             completedTask.isCompleted=true;
-            const newData=state.task.filter(i=>i.id===givenId?completedTask:i);
+            const newData=state.task.map(i=>i.id===givenId?completedTask:i);
             return {
                 task:newData,
                 msg:{
@@ -118,7 +118,7 @@ const actionReducer = (state: StateType, action: Action): StateType => {
             const givenId = action.payload.id;
             const completedTask=action.payload;
             completedTask.isCompleted=false;
-            const newData=state.task.filter(i=>i.id===givenId?completedTask:i);
+            const newData=state.task.map(i=>i.id===givenId?completedTask:i);
             return {
                 task:newData,
                 msg:{
