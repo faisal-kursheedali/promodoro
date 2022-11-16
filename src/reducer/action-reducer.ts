@@ -11,10 +11,7 @@ type HandleSingleTask = {
     type: "ADD_TASK" | "DELETE_TASK" | "EDIT_TASK" | "COMPLETED_TASK"|"INCOMPLETED_TASK"
     payload: SingleTaskType
 }
-
-
 export type Action = HandleAllTask | HandleSingleTask|TagHandler
-
 const actionReducer = (state: StateType, action: Action): StateType => {
     switch (action.type) {
         case "GET_ALL_TASK": {
@@ -48,8 +45,6 @@ const actionReducer = (state: StateType, action: Action): StateType => {
         }
         case "DELETE_TASK": {
             const givenId = action.payload.id;
-            // const giverTask=action.payload;
-            // giverTask.isDeleted=true;
             const newTask = state.task.map(i => i.id === givenId?{
                 ...i,
                 isDeleted:true
@@ -73,11 +68,6 @@ const actionReducer = (state: StateType, action: Action): StateType => {
                     newArr=[...newArr,i]
                 }
             });
-            // console.log(action.payload);
-            
-            // console.log(newArr);
-            
-            
             return {
                 task: newArr,
                 msg: {
@@ -165,10 +155,8 @@ const actionReducer = (state: StateType, action: Action): StateType => {
                     type:"scucess"
                 },
                 totalTags:tags
-                // totalTags:[]
             }
     }
-        
         default: {
             return state
         }

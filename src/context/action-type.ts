@@ -2,8 +2,8 @@ export type SingleTaskType={
     id:string
     title:string
     desc?:string
-    isCompleted:boolean
-    isDeleted:boolean
+    isCompleted:any
+    isDeleted:any
     tag:string
 }
 
