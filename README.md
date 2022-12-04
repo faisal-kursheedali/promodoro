@@ -4,6 +4,8 @@
 
 
 ![pomodoro-logo](https://user-images.githubusercontent.com/85350108/201940860-bdf6aa9f-da11-4221-9d59-b127356f4953.png)
+<br><br>
+![promodoro-demo2](https://user-images.githubusercontent.com/85350108/205493490-9f018dab-e003-44d1-8f87-60cc68951a27.png)
 
 
 
