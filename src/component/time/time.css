@@ -1,0 +1,11 @@
+.time-box{
+    font-weight: bolder;
+    font-size: larger;
+}
+.time-container{
+    width: max-content;
+    padding: 1rem;
+    aspect-ratio: 2/1;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -7,5 +7,5 @@ export type AppInitialStateType={
     sideNav:any,
     selectedTag:any,
     isTimeSelected:any
-
+    currentWeather:any
 }

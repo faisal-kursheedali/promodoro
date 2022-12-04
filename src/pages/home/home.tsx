@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import { TaskCardList, TaskInput } from '../../component';
+import { TaskCardList, TaskInput, Time } from '../../component';
 import { useActuon } from '../../context/action-context'
 import "./home.css"
 
@@ -14,6 +14,9 @@ const HomePg = () => {
   return (
     <>
       <div className="home-pg">
+        <div className="home-time">
+          <Time/>
+        </div>
         <div className="home-task-input">
               <TaskInput/>
         </div>

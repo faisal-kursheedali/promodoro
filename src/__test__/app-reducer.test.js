@@ -1,15 +1,35 @@
 import appReducer from "../reducer/app-reducer"
 
 describe("APP_TEST",()=>{
-    const initialState={
-        selectedTask:{},
-        selectedTime:0,
-        isTaskSelected:false,
-        sideNav:false,
-        selectedTag:"",
-        isTimeSelected:false
-    
+
+    const initializeState=()=>{
+        return initialState={
+            selectedTask:{},
+            selectedTime:0,
+            isTaskSelected:false,
+            sideNav:false,
+            selectedTag:"",
+            isTimeSelected:false,
+            currentWeather:{},
+    };
     }
+    let initialState;
+    beforeAll(()=>{
+        console.log("******* APP_TEST initiated *******");
+    })
+    afterAll(()=>{
+        console.log("******* APP_TEST completed *******")
+    })
+    beforeEach(()=>{
+        const tn=expect.getState().currentTestName
+        console.log(`$$ test ${tn}`)
+         return initializeState();
+    });
+    afterEach(()=>{
+        const tn=expect.getState().currentTestName
+        console.log(`$$ completed ${tn}`)
+    });
+    
     test("SELECT_TASK",()=>{
         const action={
             type:"SELECT_TASK",
@@ -36,7 +56,7 @@ describe("APP_TEST",()=>{
             isTaskSelected:true,
             sideNav:false,
             selectedTag:"",
-            isTimeSelected:false
+            isTimeSelected:false,currentWeather:{},
         
         })
     })
@@ -52,7 +72,7 @@ describe("APP_TEST",()=>{
             isTaskSelected:false,
             sideNav:false,
             selectedTag:"",
-            isTimeSelected:true
+            isTimeSelected:true,currentWeather:{},
             
         })
     })
@@ -68,7 +88,7 @@ describe("APP_TEST",()=>{
             isTaskSelected:false,
             sideNav:false,
             selectedTag:"",
-            isTimeSelected:false
+            isTimeSelected:false,currentWeather:{},
             
         })
     })
@@ -90,8 +110,8 @@ describe("APP_TEST",()=>{
             isTaskSelected:false,
             sideNav:false,
             selectedTag:"",
-            isTimeSelected:false
-        
+            isTimeSelected:false,
+            currentWeather:{},
         })
     })
     test("SIDE_NAV",()=>{
@@ -106,7 +126,7 @@ describe("APP_TEST",()=>{
             isTaskSelected:false,
             sideNav:true,
             selectedTag:"",
-            isTimeSelected:false
+            isTimeSelected:false,currentWeather:{},
         
         })
     })
@@ -122,7 +142,47 @@ describe("APP_TEST",()=>{
             isTaskSelected:false,
             sideNav:false,
             selectedTag:"task",
-            isTimeSelected:false
+            isTimeSelected:false,currentWeather:{},
+        
+        })
+    })
+    test("SET_WEATHER",()=>{
+        const action={
+            type:"SET_WEATHER",
+            payload:{
+                place:"abc",
+                temp:200
+            },
+        }
+        const result=appReducer(initialState,action);
+        expect(result).toEqual({
+            selectedTask:{},
+            selectedTime:0,
+            isTaskSelected:false,
+            sideNav:false,
+            selectedTag:"",
+            isTimeSelected:false,
+            currentWeather:{
+                     "place": "abc",
+                     "temp": 200,
+                   }
+        
+        })
+    })
+    test("SET_WEATHER_ERROR",()=>{
+        const action={
+            type:"SET_WEATHER",
+            payload:"Error",
+        }
+        const result=appReducer(initialState,action);
+        expect(result).toEqual({
+            selectedTask:{},
+            selectedTime:0,
+            isTaskSelected:false,
+            sideNav:false,
+            selectedTag:"",
+            isTimeSelected:false,
+            currentWeather:"Error"
         
         })
     })

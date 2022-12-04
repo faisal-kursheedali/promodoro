@@ -18,13 +18,14 @@ const AppContextProvider = ({children}:Prop) => {
                 desc:"",
                 isCompleted:false,
                 isDeleted:false,
-                id:""
+                id:"",
             },
             selectedTime:0,
             isTaskSelected:false,
             sideNav:false,
             selectedTag:"",
-            isTimeSelected:false
+            isTimeSelected:false,
+            currentWeather:{},
     }
     const [appState,appDispatch]=useReducer(appReducer,initialState);
   return (

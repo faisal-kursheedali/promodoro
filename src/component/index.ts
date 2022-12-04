@@ -6,5 +6,7 @@ import Sidenav from "./sidenav/sidenav";
 import TaskCardList from "./task-card-list/task-card-list";
 import TaskCard from "./task-card/task-card";
 import TaskInput from "./task-input/task-input";
+import Time from "./time/time";
 
-export {TaskCard,TaskCardList,TaskInput,Nav,Footer,Promodoro,Sidenav,Empty}
+
+export {TaskCard,TaskCardList,TaskInput,Nav,Footer,Promodoro,Sidenav,Empty,Time}

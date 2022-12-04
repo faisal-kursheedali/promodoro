@@ -2,13 +2,20 @@
 import actionReducer from "../reducer/action-reducer"
 
 describe("ACTION_TEST", () => {
-    const localStorageMock = {
-        getItem: jest.fn(),
-        setItem: jest.fn(),
-        clear: jest.fn(),
-        removeItem:jest.fn(),
-      };
-      global.localStorage = localStorageMock;
+    beforeAll(()=>{
+        console.log("******* ACTION_TEST initiated *******");
+    })
+    afterAll(()=>{
+        console.log("******* ACTION_TEST completed *******")
+    })
+    beforeEach(()=>{
+        const tn=expect.getState().currentTestName
+        console.log(`$$ test ${tn}`);
+    });
+    afterEach(()=>{
+        const tn=expect.getState().currentTestName
+        console.log(`$$ completed ${tn}`);
+    });
     test("ADD_TASK", () => {
         const initialState={
             task:[],
@@ -46,7 +53,6 @@ describe("ACTION_TEST", () => {
             totalTags:[]
         });
     });
-
     test("DELETE_TASK",()=>{
         const action = {
             type: "DELETE_TASK",
@@ -92,7 +98,6 @@ describe("ACTION_TEST", () => {
             totalTags:[]
         })
     })
-
     test("EDIT_TASK",()=>{
         const initialState={
             task:[{
@@ -121,7 +126,6 @@ describe("ACTION_TEST", () => {
             }
         }
         const result = actionReducer(initialState, action);
-
         expect(result).toEqual({
             task: [{
                 id: "test01",
@@ -300,42 +304,4 @@ describe("ACTION_TEST", () => {
             totalTags:["test"]
            });
     })
-
-    // test("GET_ALL_TASK",()=>{
-        
-    //     const initialState={
-    //         task:[],
-    //         msg:{
-    //           content:"",
-    //           type:""
-    //         },
-    //         totalTags:[]
-    //       };
-    //       const action={
-    //         type:"GET_ALL_TASK",
-    //       }
-    //       const result= actionReducer(initialState,action);
-    //       expect(localStorage.getItem).toBeCalledWith('userTask')
-
-    //     expect(result).toEqual( {
-    //         task:[{
-    //             id: "test01",
-    //             title: "abcd_test",
-    //             desc: "This is test",
-    //             isCompleted: false,
-    //             isDeleted: false,
-    //             tag: "test",
-    //         }],
-    //         msg: {
-    //             content: "fetched all task",
-    //             type: "scucess"
-    //         },
-    //         totalTags:[]
-    //     })
-
-
-
-          
-    // })
-
 })

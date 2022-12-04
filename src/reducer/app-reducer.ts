@@ -21,8 +21,13 @@ type TagHandler={
     payload:string
 }
 
+type WeatherHandler={
+    type:"SET_WEATHER",
+    payload: any
+}
 
-export type AppActionType= TaskHandler|TimeHandler|CloseHandler|SideNavHandler|TagHandler
+
+export type AppActionType= TaskHandler|TimeHandler|CloseHandler|SideNavHandler|TagHandler|WeatherHandler
 
 
 
@@ -78,8 +83,11 @@ const appReducer=(state:AppInitialStateType,action:AppActionType):AppInitialStat
                 ...state,
                 selectedTag:action.payload
             }
-        }  
+        } 
+        case "SET_WEATHER":{
+            return {...state,currentWeather:action.payload}
     }
+}
 }
 
 export default appReducer;
