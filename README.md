@@ -30,6 +30,7 @@
 <li>Data Persistence</li>
 <li>Tags for task</li>
 <li>Page title in sync with Pomodoro time</li>
+<li>The current time and temperature are displayed</li>
 <li>Testing is done using <b>JEST</b></li>
 </ul>
   
