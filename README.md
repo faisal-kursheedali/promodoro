@@ -1,6 +1,6 @@
 
 
-## Promodoro
+## ⏰ Promodoro
 
 
 ![pomodoro-logo](https://user-images.githubusercontent.com/85350108/201940860-bdf6aa9f-da11-4221-9d59-b127356f4953.png)
