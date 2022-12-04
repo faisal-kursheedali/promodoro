@@ -44,6 +44,34 @@ https://user-images.githubusercontent.com/85350108/201942596-b7deb4f3-dd37-4096-
 
 <br/>
 <h1>TEST</h1>
+<h4>Things to note on this app </h4>
+<ul>
+<li>Typescript: is strict mode on </li>
+
+<li>Typescript: Have you used "any" as type more than 5 times </li>
+
+<li>Typescript: no @ts-ignore </li>
+
+<li>Typescript: bonus: strictNullChecks On </li>
+
+<li>Testing: Is code coverage greater than 75% entire code</li>
+
+<li>Testing: Network (axios) Calls should be mocked </li>
+
+<li>Testing: Use proper matcher </li>
+
+<li>Testing: Set up and tear down method is used </li>
+
+<li>Testing: Proper file naming and folder structure </li>
+
+<li>Testing: One test should not affect other tests </li>
+
+<li>Testing: Follows Arrange, act, assert model in respective order </li>
+
+<li>Testing: Should test only one feature </li>
+
+<li>Testing: p0 scenarios are tested </li>
+</ul>
 <br/>
 
 ![Promodoro-test](https://user-images.githubusercontent.com/85350108/201946384-c190a1e4-6fbb-4ec2-b659-7dfa9e28b987.png)
