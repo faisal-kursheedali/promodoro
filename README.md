@@ -40,7 +40,8 @@
 <h3>Demo</h3> 
 
 
-https://user-images.githubusercontent.com/85350108/201942596-b7deb4f3-dd37-4096-9137-3fc19599a331.mp4
+![promodoro-demo](https://user-images.githubusercontent.com/85350108/205491437-775623bc-0119-48a3-8be9-a7225c7cb819.png)
+
 
 <br/>
 <h1>TEST</h1>
