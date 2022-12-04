@@ -79,6 +79,7 @@
 <br/>
 
 ![Promodoro-test](https://user-images.githubusercontent.com/85350108/201946384-c190a1e4-6fbb-4ec2-b659-7dfa9e28b987.png)
+<b>**Because this image was taken a long time ago, the test coverage percentage can be increased now.</b>
 
 
 
